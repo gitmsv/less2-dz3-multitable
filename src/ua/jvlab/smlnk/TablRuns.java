@@ -17,10 +17,14 @@ public class TablRuns {
      * @param args the command line arguments, number is user-defined
      */
     public static void main(String[] args) {
-        int numbr;
-        try (Scanner sc = new Scanner(System.in)) {
-            System.out.println("Введите число, таблицу умножения которого нужно вывести:");
+
+        Scanner sc = new Scanner(System.in);
+        {
+            int numbr;
+            System.out.println("Enter the number to output the multiplication"
+                    + " table X 10:");
             numbr = sc.nextInt();
+            System.out.println("-- result --");
             for (int i = 1; i <= 10; i++) {
                 System.out.println(numbr + " x " + i + " = " + numbr * i);
                 sc.close();
